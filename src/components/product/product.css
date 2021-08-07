@@ -10,6 +10,30 @@
     background-color: var(--color--white);
     box-shadow: 0.6rem 0.7rem 0.5rem 0rem rgba(0, 0, 0, 0.2);
 }
+.product__pointsremaining{
+    width: 15rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    border: none;
+    border-radius: 10rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2rem;
+    font-family: var(--font-main);
+    color: var(--color--white);
+    background-color: var(--color--dimgray-rgba);
+    z-index: 100;
+}
+.product__pointsremaining--icon{
+    width: 2.4rem;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+}
 .product__icon{
     width: 4.2rem;
     height: 4.2rem;
@@ -19,12 +43,12 @@
     z-index: 100;
 }
 .product__icon--hover{
-    width: 5.1rem;
-    height: 5.1rem;
+    width: 5rem;
+    height: 5rem;
     display: none;
     position: absolute;
     top: 1rem;
-    right: 0.6rem;
+    right: 0.5rem;
     z-index: 200;
 }
 .product__image{
@@ -107,6 +131,15 @@
 
 }
 .product__btn:hover{
+    background: var(--color--gradient);
+    color: var(--color--white);
+}
+
+.product__btn.disable{
+    background: var(--color--dimgray);
+    color: var(--color--white);
+}
+.product__btn.disable:hover{
     background: var(--color--gradient);
     color: var(--color--white);
 }

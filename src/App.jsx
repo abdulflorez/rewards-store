@@ -9,26 +9,34 @@ import Coins from "./pages/coins/Coins";
 import { UserProvider } from "./context/UserProvider";
 import { ProductProvider } from "./context/ProductProvider";
 import { OrdersProvider } from "./context/OrdersProvider";
+import { AppProvider } from "./context/AppProvider";
+
+import ModalError from "./components/modals/modalerror/ModalError";
+import ModalSuccess from "./components/modals/modalsuccess/ModalSuccess";
 
 function App() {
   return (
     <BrowserRouter>
-      <OrdersProvider>
-        <ProductProvider>
-          <UserProvider>
-            <div className="App">
-              <Header />
-              <main>
-                <Switch>
-                  <Route exact path="/" component={Shop} />
-                  <Route exact path="/orders" component={Redeems} />
-                  <Route exact path="/getcoins" component={Coins} />
-                </Switch>
-              </main>
-            </div>
-          </UserProvider>
-        </ProductProvider>
-      </OrdersProvider>
+      <AppProvider>
+        <OrdersProvider>
+          <ProductProvider>
+            <UserProvider>
+              <div className="App">
+                <Header />
+                <ModalError />
+                <ModalSuccess />
+                <main className="main">
+                  <Switch>
+                    <Route exact path="/" component={Shop} />
+                    <Route path="/orders" component={Redeems} />
+                    <Route path="/getcoins" component={Coins} />
+                  </Switch>
+                </main>
+              </div>
+            </UserProvider>
+          </ProductProvider>
+        </OrdersProvider>
+      </AppProvider>
     </BrowserRouter>
   );
 }

@@ -5,10 +5,8 @@ import Order from "../../components/order/Order"
 
 function Redeems(){
     const { ordersData } = useContext(OrdersContext)
-    console.log(ordersData)
-
     const renderOrders = ordersData.map((order)=>{
-        const id = order._id;
+        const id = order.productId;
         const name = order.name;
         const category = order.category;
         const cost = order.cost;
