@@ -1,0 +1,29 @@
+.pagination{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination__btn{
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1rem;
+    border: 0.2rem solid var(--color--silver);
+    border-radius: 50%;
+    font-size: 2.8rem;
+    font-weight: 400;
+    font-family: var(--font-main);
+    color: var(--color--dimgray);
+    background-color: transparent;
+}
+.pagination__btn:hover{
+    background-color: var(--color--white);
+    opacity: 0.7;
+}
+.pagination__btn.left{
+    transform: rotate(-90deg);
+}
+.pagination__btn.right{
+    transform: rotate(90deg);
+}
