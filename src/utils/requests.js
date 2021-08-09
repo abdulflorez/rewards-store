@@ -24,11 +24,12 @@ export const getUser = async (setUserData, setRefresh) => {
   }
 };
 
-export const getProducts = async (setProductData) => {
+export const getProducts = async (setProductData, setFilterList) => {
   try {
     const response = await fetch(`${API_URL}/products`, optionsGet);
     const data = await response.json();
     setProductData(data);
+    setFilterList(data);
   } catch (error) {
     console.log("error", error);
   }

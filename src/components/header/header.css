@@ -37,7 +37,10 @@
     text-decoration: none;
 }
 .header__navbar--options:hover{
-    color: var(--color--deepskyblue);
+    padding: 0.5rem 0.7rem;
+    border-radius: 3rem;
+    background-color: var(--color--lightgray);
+    color: var(--color--white);
 }
 .header__userbox{
     width: auto;
