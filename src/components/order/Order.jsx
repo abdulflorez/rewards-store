@@ -1,6 +1,7 @@
 import "./order.css";
 
 function Order({ id, name, category, cost, date, img }) {
+  //Just a component rendering info from array with map
   return (
     <div className="order">
       <img className="order__img" src={img} alt="" />

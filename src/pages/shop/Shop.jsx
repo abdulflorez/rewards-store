@@ -9,14 +9,16 @@ import { useContext } from "react";
 import { ProductContext } from "../../context/ProductProvider";
 
 function Shop() {
+  //STATE
   const { filterList } = useContext(ProductContext);
+  //PAGINATION
+  //VARIABLES for pagination component
   const PER_PAGE = 16;
   const pages = usePagination(filterList, PER_PAGE);
-
   const totalFound = filterList.length;
   const showOnPage = pages.currentData().length;
   const numberJump = Math.ceil(totalFound / showOnPage);
-
+  //Function for render product with array and .map
   const renderProduct = pages.currentData().map((element) => {
     const id = element._id;
     const image = element.img.hdUrl;
@@ -38,6 +40,8 @@ function Shop() {
 
   return (
     <section className="shop">
+      <img className="shop__hero" src="/assets/header-x1.png" alt="" />
+      <h1 className="shop__title">Electronics</h1>
       <div className="shop__pagination">
         <p className="shop__pagination--text">{`${showOnPage} of ${totalFound} Products`}</p>
         <Filters />

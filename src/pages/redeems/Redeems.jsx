@@ -4,7 +4,9 @@ import { useContext } from "react"
 import Order from "../../components/order/Order"
 
 function Redeems(){
+    //STATES
     const { ordersData } = useContext(OrdersContext)
+    //Function with map to render the order's history
     const renderOrders = ordersData.map((order)=>{
         const id = order.productId;
         const name = order.name;
@@ -14,7 +16,6 @@ function Redeems(){
         const img = order.img.hdUrl;
         return <Order key={id} id={id} name={name} category={category} cost={cost} date={date} img={img}/>
     })
-
 
     return(
         <section className="redeems">

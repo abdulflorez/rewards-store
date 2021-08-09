@@ -8,16 +8,21 @@ import { AppContext } from "../../context/AppProvider"
 import { useContext } from "react";
 
 function Product({ idProduct, image, name, category, cost }) {
+  //----- States 
   const { userData, setRefresh } = useContext(UserContext);
   const { setOrdersData } = useContext(OrdersContext);
-  const {   setShowSuccess, setShowError } = useContext(AppContext)
-
+  const { setShowSuccess, setShowError } = useContext(AppContext)
+  //Handle for to make order of product wiht onclick
   const handleRedeems = (id) => {
     postRedeem(id, setRefresh, setOrdersData, setShowSuccess, setShowError);
   };
+  //Section to control the dinamic render of cards, according to the balance
+  //Function to conditional render
   function balanceToRedeem(enough, noEnough) {
     return userData.points > cost ? enough : noEnough;
   }
+  //----- HTML for conditional -----
+  //ICONS
   const iconBuyBlue = (
     <img
       className="product__icon"
@@ -32,6 +37,7 @@ function Product({ idProduct, image, name, category, cost }) {
       alt="icon blue buy"
     />
   );
+  //SIGN to "low balance"
   const pointsRemaining = (
     <p className="product__pointsremaining">
       You need {cost - userData.points}
@@ -42,7 +48,10 @@ function Product({ idProduct, image, name, category, cost }) {
       />
     </p>
   );
+  //BTN to buy
+  //btn disable event with "low balance"
   const buttonDisable = balanceToRedeem(false, true);
+  //BTN if "low balance" false
   const redeemButton = (
     <button
       className="product__btn"
@@ -52,6 +61,7 @@ function Product({ idProduct, image, name, category, cost }) {
       Enjoy and Reedem Now
     </button>
   );
+  //BTN if "low balance" true
   const redirectButton = (
     <Link to="/getcoins">
       <button
@@ -61,7 +71,6 @@ function Product({ idProduct, image, name, category, cost }) {
       </button>
     </Link>
   );
-
   return (
     <div className="product">
       {balanceToRedeem(iconBuyBlue, pointsRemaining)}

@@ -3,6 +3,23 @@
     height: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.shop__hero{
+    width: 96%;
+    height: 24rem;
+    margin-top: 2rem;
+}
+.shop__title{
+    position: absolute;
+    top: 13rem;
+    left: 10%;
+    font-size: 6.4rem;
+    font-family: var(--font-main);
+    font-weight: 700;
+    line-height: 8rem;
+    color: var(--color--white);
 }
 .shop__pagination{
     width: 100%;

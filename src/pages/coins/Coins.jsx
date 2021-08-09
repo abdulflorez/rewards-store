@@ -6,8 +6,10 @@ import { AppContext } from "../../context/AppProvider";
 import { useContext } from "react";
 
 function Coins() {
+  //STATES
   const { setRefresh } = useContext(UserContext);
   const { setShowSuccess, setShowError } = useContext(AppContext);
+  //HANDLE with function for fetching
   const handleGetCoins = (value) => {
     postPoints(value, setRefresh, setShowSuccess, setShowError);
   };

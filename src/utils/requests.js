@@ -1,3 +1,4 @@
+//Constants
 const API_URL = "https://coding-challenge-api.aerolab.co";
 const HEADERS = {
   "Content-Type": "application/json",
@@ -5,13 +6,15 @@ const HEADERS = {
   Authorization:
     "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGZmNjE3NDY3Mjk2ZTAwMTk5NjQxNDgiLCJpYXQiOjE2MjczNDkzNjR9.RXl7IBspfCgl_O49ryUTUo57QYHpKi6ZQjTXRJSzEJg",
 };
-
-// REQUEST FOR GET USER
+//ALL FECTHING with callbacks from states
+// FETCHING GET
+//constant for get requests
 const optionsGet = {
   method: "GET",
   headers: HEADERS,
   redirect: "follow",
 };
+//function userData
 export const getUser = async (setUserData, setRefresh) => {
   try {
     const response = await fetch(`${API_URL}/user/me`, optionsGet);
@@ -23,7 +26,7 @@ export const getUser = async (setUserData, setRefresh) => {
     console.log("error", error);
   }
 };
-
+//function product
 export const getProducts = async (setProductData, setFilterList) => {
   try {
     const response = await fetch(`${API_URL}/products`, optionsGet);
@@ -34,17 +37,18 @@ export const getProducts = async (setProductData, setFilterList) => {
     console.log("error", error);
   }
 };
-
+//function history
 export const getHistory = async (setOrdersData) => {
   try {
     const response = await fetch(`${API_URL}/user/history`, optionsGet);
     const data = await response.json();
-    setOrdersData(data);
+    setOrdersData(data.reverse());
   } catch (error) {
     console.log("error", error);
   }
 };
-//REQUEST FOR POST POINTS
+//FETCHING POST
+//function to get new points
 export const postPoints = async (
   amount,
   setRefresh,
@@ -68,6 +72,7 @@ export const postPoints = async (
   }
 };
 
+//function to get new order redeem
 export const postRedeem = async (
   productId,
   setRefresh,
