@@ -21,7 +21,7 @@
 .modalsuccess__gif{
     width: 12rem;
     margin-top: 2rem;
-    border: 0.5rem solid var(--color--dimgray);
+    border: 0.5rem solid var(--color--white);
     border-radius: 50%;
     background-color: var(--color--white);
 }

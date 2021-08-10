@@ -14,8 +14,8 @@ function ModalSuccess() {
       <div className="modalsuccess">
         <img
           className="modalsuccess__gif"
-          src="/assets/gif-success.gif"
-          alt="gif face confused"
+          src="https://media0.giphy.com/media/18lTyvKRQTnSaQ1otq/giphy.gif?cid=790b7611789b256538f08208a50419c4d1b30cf61f7fe9a9&rid=giphy.gif&ct=g"
+          alt="gif face happy"
         />
         <h3 className="modalsuccess__title">SUCCESS!</h3>
         <p className="modalsuccess__text">WUJU! Everything is working.</p>
