@@ -73,6 +73,6 @@
     color: var(--color--dimgray);
 }
 .header__balancebox--icon{
-    width: 3rem;
-    margin-top: 0.5rem;
+    width: 2.5rem;
+    margin-top: 0rem;
 }

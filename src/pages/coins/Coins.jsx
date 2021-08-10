@@ -25,7 +25,7 @@ function Coins() {
           1000{" "}
           <img
             className="coins__container--img"
-            src="/assets/icons/coin.svg"
+            src="https://i.imgur.com/Kfvvqtj.png"
             alt="coin icon"
           />
         </button>
@@ -36,7 +36,7 @@ function Coins() {
           5000
           <img
             className="coins__container--img"
-            src="/assets/icons/coin.svg"
+            src="https://i.imgur.com/Kfvvqtj.png"
             alt="coin icon"
           />
         </button>
@@ -47,7 +47,7 @@ function Coins() {
           7500
           <img
             className="coins__container--img"
-            src="/assets/icons/coin.svg"
+            src="https://i.imgur.com/Kfvvqtj.png"
             alt="coin icon"
           />
         </button>

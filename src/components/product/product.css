@@ -30,8 +30,7 @@
     z-index: 100;
 }
 .product__pointsremaining--icon{
-    width: 2.4rem;
-    margin-top: 0.3rem;
+    width: 2rem;
     margin-left: 0.3rem;
 }
 .product__icon{
@@ -43,12 +42,11 @@
     z-index: 100;
 }
 .product__icon--hover{
-    width: 5rem;
-    height: 5rem;
+    width: 4.3rem;
     display: none;
     position: absolute;
-    top: 1rem;
-    right: 0.5rem;
+    top: 1.2rem;
+    right: 1.2rem;
     z-index: 200;
 }
 .product__image{
@@ -109,9 +107,7 @@
     color: var(--color--white);
 }
 .product__price--icon{
-    width: 3.7rem;
-    height: 3.7rem;
-    margin-top: 0.8rem;
+    width: 3rem;
     margin-left: 1rem;
 
 }

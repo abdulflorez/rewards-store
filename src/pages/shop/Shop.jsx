@@ -5,19 +5,20 @@ import Pagination from "../../components/pagination/Pagination";
 
 import usePagination from "../../hooks/usePagination";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ProductContext } from "../../context/ProductProvider";
 
 function Shop() {
   //STATE
   const { filterList } = useContext(ProductContext);
+  const [currentPage, setCurrentPage]= useState(1)
   //PAGINATION
   //VARIABLES for pagination component
   const PER_PAGE = 16;
-  const pages = usePagination(filterList, PER_PAGE);
+  const pages = usePagination(filterList, PER_PAGE, currentPage, setCurrentPage);
   const totalFound = filterList.length;
   const showOnPage = pages.currentData().length;
-  const numberJump = Math.ceil(totalFound / showOnPage);
+  const numberJump = Math.ceil(totalFound / PER_PAGE);
   //Function for render product with array and .map
   const renderProduct = pages.currentData().map((element) => {
     const id = element._id;
@@ -40,7 +41,7 @@ function Shop() {
 
   return (
     <section className="shop">
-      <img className="shop__hero" src="/assets/header-x1.png" alt="" />
+      <img className="shop__hero" src="https://i.imgur.com/8h9OLfy.png" alt="" />
       <h1 className="shop__title">Electronics</h1>
       <div className="shop__pagination">
         <p className="shop__pagination--text">{`${showOnPage} of ${totalFound} Products`}</p>

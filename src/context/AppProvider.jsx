@@ -7,6 +7,7 @@ export function AppProvider(props) {
   //STATES for modals
   const [showError, setShowError] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+
   //Variable with states 
   const values = {
     showError, setShowError,

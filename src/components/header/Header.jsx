@@ -12,26 +12,26 @@ function Header() {
   return (
     <header className="header">
       <nav className="header__nav">
-        <Link to="/">
+        <Link to="/rewards-store/">
           <img
             className="header__logo"
-            src="/assets/aerolab-logo.svg"
+            src="https://i.imgur.com/98mRTol.png"
             alt="logo-aerolab"
           />
         </Link>
         <ul className="header__navbar">
           <li>
-            <Link className="header__navbar--options" to="/">
+            <Link className="header__navbar--options" to="/rewards-store/">
               Shop
             </Link>
           </li>
           <li>
-            <Link className="header__navbar--options" to="/orders">
+            <Link className="header__navbar--options" to="/rewards-store/orders">
               Orders
             </Link>
           </li>
           <li>
-            <Link className="header__navbar--options" to="/getcoins">
+            <Link className="header__navbar--options" to="/rewards-store/getcoins">
               Get Coins
             </Link>
           </li>
@@ -43,7 +43,7 @@ function Header() {
           <p className="header__balancebox--balance">{userData.points}</p>
           <img
             className="header__balancebox--icon"
-            src="/assets/icons/coin.svg"
+            src="https://i.imgur.com/Kfvvqtj.png"
             alt="icon of balance"
           />
         </div>

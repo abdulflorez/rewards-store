@@ -26,14 +26,14 @@ function Product({ idProduct, image, name, category, cost }) {
   const iconBuyBlue = (
     <img
       className="product__icon"
-      src="/assets/icons/buy-blue.svg"
+      src="https://i.imgur.com/Hxq4bDl.png"
       alt="icon blue buy"
     />
   );
   const iconBuyWhite = (
     <img
       className="product__icon--hover"
-      src="/assets/icons/buy-white.svg"
+      src="https://i.imgur.com/7uHsCoj.png"
       alt="icon blue buy"
     />
   );
@@ -43,7 +43,7 @@ function Product({ idProduct, image, name, category, cost }) {
       You need {cost - userData.points}
       <img
         className="product__pointsremaining--icon"
-        src="/assets/icons/coin.svg"
+        src="https://i.imgur.com/Kfvvqtj.png"
         alt="icon coin"
       />
     </p>
@@ -84,7 +84,7 @@ function Product({ idProduct, image, name, category, cost }) {
           <p className="product__price--value">{cost}</p>
           <img
             className="product__price--icon"
-            src="/assets/icons/coin.svg"
+            src="https://i.imgur.com/Kfvvqtj.png"
             alt="icon coin"
           />
         </div>

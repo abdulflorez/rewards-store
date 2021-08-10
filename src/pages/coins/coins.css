@@ -48,7 +48,6 @@
     background: var(--color--gradient);
 }
 .coins__container--img{
-    width: 4rem;
-    margin-top: 0.7rem;
+    width: 3rem;
     margin-left: 1rem;
 }

@@ -27,9 +27,9 @@ function App() {
                 <ModalSuccess />
                 <main className="main">
                   <Switch>
-                    <Route exact path="/" component={Shop} />
-                    <Route path="/orders" component={Redeems} />
-                    <Route path="/getcoins" component={Coins} />
+                    <Route exact path="/rewards-store/" component={Shop} />
+                    <Route path="/rewards-store/orders" component={Redeems} />
+                    <Route path="/rewards-store/getcoins" component={Coins} />
                   </Switch>
                 </main>
               </div>

@@ -30,7 +30,8 @@
     margin: 1.5rem 0rem;
 }
 .shop__pagination--text{
-    width: 10rem;
+    width: 14rem;
+    margin-right: 2rem;
     font-size: 1.8rem;
     font-weight: 700;
     line-height: 2rem;
