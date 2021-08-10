@@ -27,7 +27,7 @@ function App() {
                 <ModalSuccess />
                 <main className="main">
                   <Switch>
-                    <Route exact path="/rewards-store/" component={Shop} />
+                    <Route exact path="/rewards-store" component={Shop} />
                     <Route path="/rewards-store/orders" component={Redeems} />
                     <Route path="/rewards-store/getcoins" component={Coins} />
                   </Switch>

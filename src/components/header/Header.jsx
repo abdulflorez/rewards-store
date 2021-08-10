@@ -12,7 +12,7 @@ function Header() {
   return (
     <header className="header">
       <nav className="header__nav">
-        <Link to="/rewards-store/">
+        <Link to="/rewards-store">
           <img
             className="header__logo"
             src="https://i.imgur.com/98mRTol.png"
@@ -21,7 +21,7 @@ function Header() {
         </Link>
         <ul className="header__navbar">
           <li>
-            <Link className="header__navbar--options" to="/rewards-store/">
+            <Link className="header__navbar--options" to="/rewards-store">
               Shop
             </Link>
           </li>
